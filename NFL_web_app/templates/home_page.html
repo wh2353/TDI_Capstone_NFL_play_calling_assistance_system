@@ -1,0 +1,131 @@
+{% extends "main/base.html" %}
+{% block style %}
+<link rel="stylesheet" href="/static/css/main.css">
+{%endblock%}
+{% block content %}
+<h2>Please select information below:</h2>
+<form action="/result", method="GET">
+    <div>
+        <label for="year">Year</label>
+        <input type="number" name="Year" id="year" min="2018" max="2021", step="1" required>
+    </div>
+    <div>
+        <label for="offenseteam">OffenseTeam</label>
+        <select name="OffenseTeam" id="offenseteam" required>
+            <option option disabled="" selected="">Please choose a team</option>
+            <option value="ARI">ARI</option>
+            <option value="ATL">ATL</option>
+            <option value="BAL">BAL</option>
+            <option value="BUF">BUF</option>
+            <option value="CAR">CAR</option>
+            <option value="CHI">CHI</option>
+            <option value="CIN">CIN</option>
+            <option value="CLE">CLE</option>
+            <option value="DAL">DAL</option>
+            <option value="DEN">DEN</option>
+            <option value="DET">DET</option>
+            <option value="GB">GB</option>
+            <option value="HOU">HOU</option>
+            <option value="IND">IND</option>
+            <option value="JAX">JAX</option>
+            <option value="KC">KC</option>
+            <option value="LV">LV</option>
+            <option value="LAC">LAC</option>
+            <option value="LA">LAR</option>
+            <option value="MIA">MIA</option>
+            <option value="MIN">MIN</option>
+            <option value="NE">NE</option>
+            <option value="NO">NO</option>
+            <option value="NYG">NYG</option>
+            <option value="NYJ">NYJ</option>
+            <option value="PHI">PHI</option>
+            <option value="PIT">PIT</option>
+            <option value="SF">SF</option>
+            <option value="SEA">SEA</option>
+            <option value="TB">TB</option>
+            <option value="TEN">TEN</option>
+            <option value="WAS">WAS</option>
+        </select>
+        <label for="defenseteam">DefenseTeam</label>
+        <select name="DefenseTeam" id="defenseteam" required>
+            <option option disabled="" selected="">Please choose a team</option>
+            <option value="ARI">ARI</option>
+            <option value="ATL">ATL</option>
+            <option value="BAL">BAL</option>
+            <option value="BUF">BUF</option>
+            <option value="CAR">CAR</option>
+            <option value="CHI">CHI</option>
+            <option value="CIN">CIN</option>
+            <option value="CLE">CLE</option>
+            <option value="DAL">DAL</option>
+            <option value="DEN">DEN</option>
+            <option value="DET">DET</option>
+            <option value="GB">GB</option>
+            <option value="HOU">HOU</option>
+            <option value="IND">IND</option>
+            <option value="JAX">JAX</option>
+            <option value="KC">KC</option>
+            <option value="LV">LV</option>
+            <option value="LAC">LAC</option>
+            <option value="LA">LAR</option>
+            <option value="MIA">MIA</option>
+            <option value="MIN">MIN</option>
+            <option value="NE">NE</option>
+            <option value="NO">NO</option>
+            <option value="NYG">NYG</option>
+            <option value="NYJ">NYJ</option>
+            <option value="PHI">PHI</option>
+            <option value="PIT">PIT</option>
+            <option value="SF">SF</option>
+            <option value="SEA">SEA</option>
+            <option value="TB">TB</option>
+            <option value="TEN">TEN</option>
+            <option value="WAS">WAS</option>
+        </select>
+        
+    </div>
+
+
+    <div>
+        <label for="quarter">Quarter</label>
+        <select name="Quarter" id="quarter" required>
+            <option option disabled="" selected="">Please choose current Quarter</option>
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+            <option value="5">OT</option>
+        </select>
+        <label for="minute">Minute</label>
+        <input type="number" name="Minute", id="minute" min="0" max="14", step="1" required>
+        <label for="second">Second</label>
+        <input type="number" name="Second", id="second" min="0" max="59", step="1" required>
+ 
+    </div>
+
+
+
+    <div>
+        <label for="down">Down</label>
+        <select name="Down" id="down" required>
+            <option option disabled="" selected="">Please choose current Down</option>
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+        </select>
+        <label for="yardline">YardLine(0-100)</label>
+        <input type="number" name="Yardline", id="yardline" min="0" max="100", step="1" required>
+        <label for="togo">Yards needed</label>
+        <input type="number" name="Yards needed", id="togo" min="0" max="100", step="1" required>
+ 
+    </div>
+
+    
+    
+
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+
+</form>
+{%endblock%}
