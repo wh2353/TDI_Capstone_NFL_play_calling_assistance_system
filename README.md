@@ -20,7 +20,7 @@ During an NFL game, different formations may be used for different plays, and th
 ### Step 2. Exploratory Analysis before Modeling
 Before modeling, a simple exploratory data analysis was performed on combined dataset to see whether those NFL teams can be separated based on their offense or defense features. In order to achieve this, I extracted either offense or defense features only, and performed PCA on both subsets. As shown in the figures below, MIA and BAL standed out as outliers for offense while CAR, PHI and ARI seem to be dense outliers. This result is as expected, as in recently years, MIA is notorious for lacking in run offense while the QB of BAL, Lamar Jackson, is one of the leaders in rushing offense; on the other hand, PHI and Car have weakness in pass protection while ARI has lots of issues in run defense.<br>
 
- <img src="readme_images/NFL_offense.png" width=400 height=300>     <img src="readme_images/NFL_defense.png" width=400 height=300>  <br>
+ <img src="readme_images/NFL_offense.png" width=425 height=330>     <img src="readme_images/NFL_defense.png" width=425 height=330>  <br>
 
 ### Step 3. Model Creation
 The model building started with creating a new response variable that measures the success of a play, defined as the function of yards needed against total yards gained during a play. Then the combined data, together with the response variable were splitted 80-20 into train and test datasets. Data were train, cross-validated and tested on a linear and non-linear mixed model, in which data were first fit with regularized linear regression model, such as ridge, then the residuals were further fitted into a non-linear random forest regression model and both results were combined to generate the final predictions from the model. 
