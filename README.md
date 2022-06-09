@@ -10,9 +10,9 @@ The national football league (NFL), the world’s most profitable sports league,
 The goal of this project is to build a web application that can take game information from the user, process by a machine learning model and return a list of recommended plays ranked by chance of success for the user to choose from. 
 
 In order to achieve this, two sets of data were utilized to build the model. The first set is the NFL play by play dataset , which includes every play of all 32 NFL teams from season year 2018 to 2021. The other dataset is the Madden NFL player rating data, which contains ratings in 43 categories of each player of all 32 NFL teams from season year 2018 to 2021.
-The play by play dataset can be downloaded directly through http://nflsavant.com/about.php, in which the data for each season year were listed in separate csv tables thus need to be further combined to generate the full dataset. Exploratory data analysis was then performed with pandas profiling on the full dataset, to investigate missing values and potential correlations among variables. Finally, the full dataset were filtered and categorical features were converted to one-hot vectors for further processing.
+The play by play dataset can be downloaded directly through [NFLsavant](http://nflsavant.com/about.php), in which the data for each season year were listed in separate csv tables thus need to be further combined to generate the full dataset. Exploratory data analysis was then performed with pandas profiling on the full dataset, to investigate missing values and potential correlations among variables. Finally, the full dataset were filtered and categorical features were converted to one-hot vectors for further processing.
 
-The Madden NFL player ratings data can be accessed through https://maddenratings.weebly.com, and downloaded using web scraping. The 2021 season data for all 32 teams were summarized in one excel table while the 2018-2020 season data were listed separately for each NFL team, thus needing to be further combined. After obtaining all the data, the rating category columns need to be renamed to make sure that the same kind of rating has the same name across all four datasets. Finally, one-hot encoded vectors were applied to replace categorical features.
+The Madden NFL player ratings data can be accessed through [Madden Ratings](https://maddenratings.weebly.com), and downloaded using web scraping. The 2021 season data for all 32 teams were summarized in one excel table while the 2018-2020 season data were listed separately for each NFL team, thus needing to be further combined. After obtaining all the data, the rating category columns need to be renamed to make sure that the same kind of rating has the same name across all four datasets. Finally, one-hot encoded vectors were applied to replace categorical features.
 
 During an NFL game, different formations may be used for different plays, and the players for a team on the court may vary according to play and formations, and a team may exchange or add/retire players during the off-season. Thus, in order to create a NFL play by play and player rating combined dataset for all seasons, players were selected based on their positions according to different formations listed in this wiki page and those with higher ratings were selected first. This process will be repeated for every team for each of four season years to form the final combined dataset for modeling.
 
@@ -22,6 +22,6 @@ The final product has been deployed as a web application in which the user can i
 
 The complete workflow of this project was described in the flowchart below:
 ## Deliverables
-The webapp is deployed at: https://boiling-garden-01306.herokuapp.com/ <br>
-Github repository: https://github.com/wh2353/TDI_Capstone_NFL_play_calling_assistance_system
+The webapp is deployed at [this link](https://boiling-garden-01306.herokuapp.com/) <br>
+Github repository [click here](https://github.com/wh2353/TDI_Capstone_NFL_play_calling_assistance_system)
 
