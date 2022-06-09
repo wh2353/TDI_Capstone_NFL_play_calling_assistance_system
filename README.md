@@ -21,6 +21,7 @@ The model building started with creating a new response variable that measures t
 The final product has been deployed as a web application in which the user can input self-defined game information such as offense/defense team, time, down, yards, etc. This information will be paired with the players’ rating data matched to every possible formation and pass/rush direction combinations and further processed in the backend by the built machine learning model to create a list of predictions for all possible plays. Finally, the predictions were converted into probabilities as “chance of success” using self-defined sigmoid functions, and the top 5 plays with highest “chance of success” will be translated into “Football” language and output . 
 
 The complete workflow of this project was described in the flowchart below:
+<img src="readme_images/nfl_flowchart.png" width=500 height=500><br>
 ## Deliverables
 The webapp is deployed at [this link](https://boiling-garden-01306.herokuapp.com/) <br>
 Github repository [click here](https://github.com/wh2353/TDI_Capstone_NFL_play_calling_assistance_system)
