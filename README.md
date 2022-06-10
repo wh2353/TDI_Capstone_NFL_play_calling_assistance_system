@@ -32,6 +32,6 @@ The complete workflow of this project was described in the flowchart below:<br><
 
 <img src="readme_images/nfl_flowchart.png" width=600 height=500><br>
 ## Deliverables
-The webapp is deployed at [this link](https://boiling-garden-01306.herokuapp.com/) <br>
+The web application is deployed at [this link]([https://boiling-garden-01306.herokuapp.com/](https://nfl-play-calling-assistant.herokuapp.com/)) <br>
 Github repository [click here](https://github.com/wh2353/TDI_Capstone_NFL_play_calling_assistance_system)
 
