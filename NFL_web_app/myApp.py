@@ -122,9 +122,9 @@ def result():
 	print("Finished loading the trained model!")
 
 
-	#step 3: load the full combined data
-	with bz2.BZ2File("model_data/20220428_final_combined_NFL_data.pbz2", "rb") as f:
-		final_combined_data = cPickle.load(f)
+	#step 3: load the full combined data (filterd to keep only unique [OffenseTeam, DefenseTeam, Formation and SeasonYear] to save memory usage)
+	with open("model_data/060922_filtered_final_combined_data_for_prediction.pkl", "rb") as f:
+		final_combined_data = pickle.load(f)
     
 	print(f"The preprocessed data shape is {final_combined_data.shape}")
 
