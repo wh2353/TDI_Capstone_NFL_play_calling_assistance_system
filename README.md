@@ -28,11 +28,11 @@ In order to further verify what we have observed from the PCA plots, random fore
 
 BAL Offense Breakdown     |  MIA Offense Breakdown
 :-------------------------:|:-------------------------:
-<img src="readme_images/BAL_offense_key_features.png" width=450 height=300> | <img src="readme_images/MIA_offense_key_features.png" width=450 height=300>
+<img src="readme_images/BAL_offense_key_features.png" width=475 height=300> | <img src="readme_images/MIA_offense_key_features.png" width=475 height=300>
 
 ARI Defense Breakdown       |  CAR Defense Breakdown
 :-------------------------:|:-------------------------:
-<img src="readme_images/ARI_defense_key_features.png" width=450 height=300> | <img src="readme_images/CAR_defense_key_features.png" width=450 height=300>
+<img src="readme_images/ARI_defense_key_features.png" width=475 height=300> | <img src="readme_images/CAR_defense_key_features.png" width=475 height=300>
  
 ### Step 3. Model Creation
 The model building started with creating a new response variable that measures the success of a play, defined as the function of yards needed against total yards gained during a play. Then the combined data, together with the response variable were splitted 80-20 into train and test datasets. Data were train, cross-validated and tested on a linear and non-linear mixed model, in which data were first fit with regularized linear regression model, such as ridge, then the residuals were further fitted into a non-linear random forest regression model and both results were combined to generate the final predictions from the model. The final model, together with a filtered combined dataset, where only records with unique offense/defense team, SeasonYear and Formation features were kept to reduce the memory usage, were pickled for being utilized by the web application. 
