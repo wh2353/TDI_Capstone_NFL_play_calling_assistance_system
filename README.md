@@ -1,4 +1,4 @@
-# NFL Play Calling Assistance System
+# NFL Play Calling Assistance System [Web App](https://nfl-play-calling-assistant.herokuapp.com/) <br>
 <b>The Data Incubator (TDI) Capstone Project</b><br>
 <b>Author:</b> Wenrui Huang<br>
 <b>Date: </b> 2022-06-09<br>
@@ -31,7 +31,4 @@ The final product has been deployed as a web application on Heroku in which the 
 The complete workflow of this project was described in the flowchart below:<br><br>
 
 <img src="readme_images/nfl_flowchart.png" width=600 height=500><br>
-## Deliverables
-The web application is deployed at [this link](https://nfl-play-calling-assistant.herokuapp.com/) <br>
-Github repository [click here](https://github.com/wh2353/TDI_Capstone_NFL_play_calling_assistance_system)
 
