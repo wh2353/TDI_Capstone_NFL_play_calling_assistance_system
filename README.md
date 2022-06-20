@@ -1,7 +1,8 @@
-# NFL Play Calling Assistance System [Web App](https://nfl-play-calling-assistant.herokuapp.com/) <br>
+# NFL Play Calling Assistance System<br>
 <b>The Data Incubator (TDI) Capstone Project</b><br>
 <b>Author:</b> Wenrui Huang<br>
 <b>Date: </b> 2022-06-09<br>
+<b>Heroku Web App: </b> [Click Here](https://nfl-play-calling-assistant.herokuapp.com/) 
 ## Summary
 In this project, I built a web app (based on a machine learning model) that can assist NFL coaches make play calls during a game in order to boost a team’s chance of winning, ultimately attracting more fans and bringing in more revenue for the organization.  
 ## Project Statement
@@ -19,8 +20,12 @@ During an NFL game, different formations may be used for different plays, and th
 
 ### Step 2. Exploratory Analysis before Modeling
 Before modeling, a simple exploratory data analysis was performed on combined dataset to see whether those NFL teams can be separated based on their offense or defense features. In order to achieve this, I extracted either offense or defense features only, and performed PCA on both subsets. As shown in the figures below, MIA and BAL stand out as outliers for offense while CAR, PHI and ARI seem to be defense outliers. This result is as expected, as in recently years, MIA is notorious for lacking of run offense while the QB of BAL, Lamar Jackson, is one of the leading rushers in the league; on the other hand, PHI and CAR have weakness in pass protection while ARI has lots of issues in run defense.<br>
+OffenseTeam PCA Plot       |  DefenseTeam PCA Plot
+:-------------------------:|:-------------------------:
+ <img src="readme_images/NFL_offense.png" width=425 height=330>  |   <img src="readme_images/NFL_defense.png" width=425 height=330>  <br>
 
- <img src="readme_images/NFL_offense.png" width=425 height=330>     <img src="readme_images/NFL_defense.png" width=425 height=330>  <br>
+In order to further verify what we have observed from the PCA plots, random forest regression model were applied to delineate the important of each features in those offense or defense outliers in response to yard gain/loss during a play. As demonstrated in the bar plots below: 
+
  
 ### Step 3. Model Creation
 The model building started with creating a new response variable that measures the success of a play, defined as the function of yards needed against total yards gained during a play. Then the combined data, together with the response variable were splitted 80-20 into train and test datasets. Data were train, cross-validated and tested on a linear and non-linear mixed model, in which data were first fit with regularized linear regression model, such as ridge, then the residuals were further fitted into a non-linear random forest regression model and both results were combined to generate the final predictions from the model. The final model, together with a filtered combined dataset, where only records with unique offense/defense team, SeasonYear and Formation features were kept to reduce the memory usage, were pickled for being utilized by the web application. 
