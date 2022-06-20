@@ -24,7 +24,7 @@ OffenseTeam PCA Plot       |  DefenseTeam PCA Plot
 :-------------------------:|:-------------------------:
  <img src="readme_images/NFL_offense.png" width=425 height=330>  |   <img src="readme_images/NFL_defense.png" width=425 height=330>  <br>
 
-In order to further verify what we have observed from the PCA plots, random forest regression model were applied to delineate the important of each features in those offense or defense outliers in response to yard gain/loss during a play. As demonstrated in the bar plots below, BAL's offense is dominanted by Rush plays while MIA mainly relied on its pass plays; on the other hand, ARI have issues in defending 1st, 2nd plays as well as left end rushes while CAR defense is vulernable to deep left passes. Such findings agree well with observations in PCA plots, strongly suggesting the feasibilty of building a play calls prediction model based on these data.<br>
+In order to further verify what we have observed from the PCA plots, random forest regression model were applied to delineate the important of each features in those offense or defense outliers in response to yard gain/loss during a play. As demonstrated in the bar plots below, BAL's offense is dominanted by rush plays while MIA mainly relied on its pass plays; on the other hand, ARI have issues in defending 1st, 2nd plays as well as left end rushes while CAR defense is vulernable to deep left passes. Such findings agree well with observations in PCA plots, strongly suggesting the feasibilty of building a play calls prediction model based on these data.<br>
 
 BAL Offense Breakdown     | | MIA Offense Breakdown
 :-------------------------:|:-------------------------:|:-------------------------:
