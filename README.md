@@ -24,15 +24,15 @@ OffenseTeam PCA Plot       |  DefenseTeam PCA Plot
 :-------------------------:|:-------------------------:
  <img src="readme_images/NFL_offense.png" width=425 height=330>  |   <img src="readme_images/NFL_defense.png" width=425 height=330>  <br>
 
-In order to further verify what we have observed from the PCA plots, random forest regression model were applied to delineate the important of each features in those offense or defense outliers in response to yard gain/loss during a play. As demonstrated in the bar plots below: <br>
+In order to further verify what we have observed from the PCA plots, random forest regression model were applied to delineate the important of each features in those offense or defense outliers in response to yard gain/loss during a play. As demonstrated in the bar plots below, BAL's offense is dominanted by Rush plays while MIA mainly relied on its pass plays; on the other hand, ARI have issues in defending 1st, 2nd plays as well as left end rushes while CAR defense is vulernable to deep left passes. Such findings agree well with observations in PCA plots, strongly suggesting the feasibilty of building a play calls prediction model based on these data.<br>
 
 BAL Offense Breakdown     |  MIA Offense Breakdown
 :-------------------------:|:-------------------------:
-<img src="readme_images/BAL_offense_key_features.png", width=400, height=300> | <img src="readme_images/MIA_offense_key_features.png", width=400, height=300>
+<img src="readme_images/BAL_offense_key_features.png" width=450 height=300> | <img src="readme_images/MIA_offense_key_features.png" width=450 height=300>
 
 ARI Defense Breakdown       |  CAR Defense Breakdown
 :-------------------------:|:-------------------------:
-<img src="readme_images/ARI_defense_key_features.png", width=400, height=300> | <img src="readme_images/CAR_defense_key_features.png", width=400, height=300>
+<img src="readme_images/ARI_defense_key_features.png" width=450 height=300> | <img src="readme_images/CAR_defense_key_features.png" width=450 height=300>
  
 ### Step 3. Model Creation
 The model building started with creating a new response variable that measures the success of a play, defined as the function of yards needed against total yards gained during a play. Then the combined data, together with the response variable were splitted 80-20 into train and test datasets. Data were train, cross-validated and tested on a linear and non-linear mixed model, in which data were first fit with regularized linear regression model, such as ridge, then the residuals were further fitted into a non-linear random forest regression model and both results were combined to generate the final predictions from the model. The final model, together with a filtered combined dataset, where only records with unique offense/defense team, SeasonYear and Formation features were kept to reduce the memory usage, were pickled for being utilized by the web application. 
